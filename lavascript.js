@@ -1,44 +1,165 @@
-console.log('time for a roadtrip!');
+console.log('the pirate adventure');
 
-const seatsInCar = 5;
-let passengers = [];
-let tankFull = false;
+const theWalrus = 10; // crew needed to sail
+let crew = ['flint', 'gates', 'randall'];
+let totalCannonballs = [];
+let deadMen = [];
+let cannonBalls = 0; // need 3 cannonballs per cannon
+let cannons = 4;
+const maxCannons = 6; //max the ship can carry
 
-function enoughSeats(){
-    console.log('in enoughSeats');
-    //check if seatsInCar >= passengers.length
-    if( seatsInCar >= passengers.length ){
+
+/* 
+reference of crew names 
+flint
+gates
+silver
+billy
+dufrane
+degroot
+logan
+mosiah
+singleton
+boclerk
+muldoon
+morley
+duffy
+vincent
+*/
+
+function enoughCrew(){
+    //check to see if the boat can be manned
+    if( theWalrus === crew.length ){
+        console.log( 'in enoughCrew' );
         return true;
-    }// end enough seats
+    } // end if exact crew
+    else if( theWalrus > crew.length ){
+        console.log( 'in enoughCrew' )
+        return false;
+    }// end if crew is needed
+    else if( theWalrus < crew.length) {
+        console.log( 'in enoughCrew' )
+        return true;
+    }// end if too many people on board
+}// end enoughCrew
+
+function hireCrew( nameOfPirate ){
+    console.log( 'in hireCrew' )
+    crew.push( nameOfPirate );
+}// end hire crew
+
+function cannonsArmed(){
+    if( cannonBalls >= cannons*3 ) {
+        console.log( 'in cannonsArmed' );
+        return true;
+    }// cannons are loaded
     else {
+        console.log( 'in cannonsArmed' );
         return false;
-    }// end not enough seats
-}// end enough seats
+    }// need more cannonballs
+}// end cannonsArmed
 
-function getInCar ( nameOfPassenger ){
-    console.log( 'in getInCar', nameOfPassenger );
-    // push the passenger into the passengers array
-    passengers.push( nameOfPassenger );
-    return passengers;
-}// end getInCar
+// function a while loop for cannon balls?
 
-function readyForRoadTrip(){
-    console.log( 'in readyForRoadTrip' )
-    if( enoughSeats() && tankFull ){
-        return true;
-    } // end tank full
+function reloadBalls(){
+    while( cannonBalls < totalCannonballs.length )
+    console.log( 'in reloadBalls' );
+    cannonBalls++;
+    return cannonBalls
+}// end while loop
+
+function readyToSail(){
+    if( enoughCrew() === true && cannonsArmed() === true ){
+        console.log( 'in readyToSail' );
+        return 'Lets get underway!'
+    }// lets get underway
     else{
-        return false;
-    }// end tank not full
-}// end ready for trip
+        console.log( 'in readyToSail' );
+        return 'Need more time in Nassau'
+    }// not ready to sail
+}// end ready to sail
 
 
-getInCar('ben');
-getInCar('star lord');
-getInCar('kate');
-getInCar('lorien');
-getInCar('keely');
+// BEGIN PIRATE ADVENTURE
 
-console.log( passengers );
-console.log( 'enough seats?', enoughSeats() );
-console.log( 'are we ready to go?', readyForRoadTrip() );
+// your ship docks at nassau. you need supplies to hunt
+// add crew and ammo so the ship is ready to get under way
+console.log( readyToSail(), crew, cannonBalls );
+
+//hire crew
+hireCrew( 'singleton' );
+hireCrew( 'billy' );
+hireCrew( 'dufrane' );
+hireCrew( 'degroot' );
+hireCrew( 'logan' );
+hireCrew( 'mosiah' );
+hireCrew( 'boclerk' );
+
+//purchase cannonballs
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+
+console.log( readyToSail(), crew, cannonBalls );
+
+//the walrus attacks the hispaniola
+//fires 4 cannonballs and adds 'silver' to their crew
+
+cannonBalls -= 4;
+hireCrew( 'silver' );
+
+console.log( readyToSail(), crew, cannonBalls );
+
+//sails back to nassau for supplies.
+reloadBalls()
+reloadBalls()
+reloadBalls()
+reloadBalls()
+
+// while on nassau, singleton challenges flint and dies - add to deadMen 
+//vane kills mosiah in an attempt to depose cpt. flint
+
+for( let i=0; i<crew.length; i++){
+    if( crew[i] === 'singleton'){
+        let theDead = crew.splice(i,1);
+        deadMen.push( theDead );
+    } else if( crew[i] === 'mosiah'){
+        let theDead = crew.splice(i,1);
+        deadMen.push( theDead );
+    }//end of mosiah
+}//end of singleton
+
+// recruit muldoon
+hireCrew( 'muldoon' );
+
+console.log( crew );
+console.log( deadMen );
+console.log( readyToSail(), crew, cannonBalls );
+
+// the walrus captures brysons ship, but loses two crew in the process
+// crew lost - boclerk and logan
+// cannonballs lost 1
+cannonBalls -= 1;
+
+for(let i=0; i<crew.length; i++){
+    if( crew[i] === 'boclerk'){
+        let theDead = crew.splice(i,1);
+        deadMen.push( theDead );
+    } else if( crew[i] === 'logan'){
+        let theDead = crew.splice(i,1);
+        deadMen.push( theDead );
+    }//end of logan
+}//end of loop    
+    
+
+console.log( crew );
+console.log( deadMen );
