@@ -1,31 +1,44 @@
-console.log('if you build it, they will play');
+console.log('time for a roadtrip!');
 
-function actualMath( num0, num1 ){
-    console.log( 'in actualMath', num0, num1 );
-    let answer = num0 + num1;
-    return answer;
-}
+const seatsInCar = 5;
+let passengers = [];
+let tankFull = false;
 
-function logger() {
-    console.log( 'in logger' );
-}// end logger
+function enoughSeats(){
+    console.log('in enoughSeats');
+    //check if seatsInCar >= passengers.length
+    if( seatsInCar >= passengers.length ){
+        return true;
+    }// end enough seats
+    else {
+        return false;
+    }// end not enough seats
+}// end enough seats
 
-function mathExample(){
-    console.log( 'in mathExample' );
-    let answer = 3 * 9;
-    return answer;
-}
+function getInCar ( nameOfPassenger ){
+    console.log( 'in getInCar', nameOfPassenger );
+    // push the passenger into the passengers array
+    passengers.push( nameOfPassenger );
+    return passengers;
+}// end getInCar
 
-function returner(){
-    console.log( 'in returner' );
-    return true;
-}
+function readyForRoadTrip(){
+    console.log( 'in readyForRoadTrip' )
+    if( enoughSeats() && tankFull ){
+        return true;
+    } // end tank full
+    else{
+        return false;
+    }// end tank not full
+}// end ready for trip
 
-logger();
-returner();
-console.log( 'running returner:', returner());
-console.log( 'running mathExample:', mathExample());
-console.log( 'running actualMath 4, 2', actualMath(4, 2));
-console.log( 'running actualMath 234, 123', actualMath(234, 123));
-console.log( 'running actualMath 82, 37', actualMath(82, 37));
-console.log( 'running actualMath 239, 082', actualMath(239, 82));
+
+getInCar('ben');
+getInCar('star lord');
+getInCar('kate');
+getInCar('lorien');
+getInCar('keely');
+
+console.log( passengers );
+console.log( 'enough seats?', enoughSeats() );
+console.log( 'are we ready to go?', readyForRoadTrip() );
