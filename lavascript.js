@@ -1,36 +1,36 @@
-console.log('more review');
+// console.log('more review');
 
-function minNumber(val1, val2){
-    return Math.min(val1, val2);
-}
+// function minNumber(val1, val2){
+//     return Math.min(val1, val2);
+// }
 
-minNumber(342, 1235);
-console.log( minNumber(6, 1));
+// minNumber(342, 1235);
+// console.log( minNumber(6, 1));
 
 
-function evenOrOdd(num){
-    if( num % 2 === 0 ){
-        return true;
-    } else {
-        return false;
-    }// end boolean
-}// end function
+// function evenOrOdd(num){
+//     if( num % 2 === 0 ){
+//         return true;
+//     } else {
+//         return false;
+//     }// end boolean
+// }// end function
 
-console.log( evenOrOdd(-2) );
+// console.log( evenOrOdd(-2) );
 
-//bean counting
+// //bean counting
 
-let mPoppins = 'supercalifragilisticexpialdocious'
-let charCount = 0;
+// let mPoppins = 'supercalifragilisticexpialdocious'
+// let charCount = 0;
 
-function ltrCount(x){
-    for(let i = 0; i < mPoppins.length; i++){
-        if( mPoppins[i] === x ){
-            charCount++;
-        }
-    }
-    return 'The letter ' + x + ' appears ' + charCount + ' times!';
-}
+// function ltrCount(x){
+//     for(let i = 0; i < mPoppins.length; i++){
+//         if( mPoppins[i] === x ){
+//             charCount++;
+//         }
+//     }
+//     return 'The letter ' + x + ' appears ' + charCount + ' times!';
+// }
 
-console.log( ltrCount('i') );
-console.log( charCount );
+// console.log( ltrCount('i') );
+// console.log( charCount );
