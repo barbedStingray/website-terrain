@@ -1,44 +1,36 @@
-console.log('more loops practice');
+console.log('more review');
 
-let allNumbers = [0,1,2,3,4,5,6,7,8,9,10];
+function minNumber(val1, val2){
+    return Math.min(val1, val2);
+}
 
-// add all even numbers and odd numbers to their seperate arrays
-
-let x = 8;
-
-while( x > 0 ){
-    console.log('number:', x);
-    x--;
-}// end while loop
+minNumber(342, 1235);
+console.log( minNumber(6, 1));
 
 
+function evenOrOdd(num){
+    if( num % 2 === 0 ){
+        return true;
+    } else {
+        return false;
+    }// end boolean
+}// end function
 
+console.log( evenOrOdd(-2) );
 
+//bean counting
 
-// for( let i = 0; i < 11; i++){
-//     console.log('this is number', allNumbers[i] );
-//     if( i === 5 ){
-//     console.log('in the middle!');
-//     }// end look for 5
-// }// end for loop
+let mPoppins = 'supercalifragilisticexpialdocious'
+let charCount = 0;
 
-// for( let num of allNumbers ){
-//     console.log( 'in of statement', num );
-// }
+function ltrCount(x){
+    for(let i = 0; i < mPoppins.length; i++){
+        if( mPoppins[i] === x ){
+            charCount++;
+        }
+    }
+    return 'The letter ' + x + ' appears ' + charCount + ' times!';
+}
 
-// for( let i = 1; i < allNumbers.length; i += 2 ){
-//     console.log( 'in for loop', allNumbers[i] );
-//     if( allNumbers[i] === i ){
-//         oddNumbers.push( i );
-//     }// odd number check end
-// }// i odd loop end
-
-// for(let i = 0; i < allNumbers.length; i += 2){
-//     console.log( 'in even loop', allNumbers[i] );
-//     if( allNumbers[i] === i ){
-//         evenNumbers.push( i );
-//     }//end test even
-// } //end even loop
-
-// console.log( oddNumbers );
-// console.log( evenNumbers );
+console.log( ltrCount('i') );
+console.log( charCount );
