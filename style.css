@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+    color: white;
+
+}
+
+#scenics-title, #stingray-title {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.stingray-img {
+    height: 6em;
+    width: auto;
+}
+
+
+.scenics-img {
+    height: 9em;
+    width: auto;
+}
+
+
