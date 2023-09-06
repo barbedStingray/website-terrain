@@ -1,10 +1,11 @@
 body {
     background-color: black;
     color: white;
+    text-align: center;
 
 }
 
-#scenics-title, #stingray-title {
+#scenics-title, #stingray-title, #stingray-logo {
     display: inline-block;
     vertical-align: top;
 
@@ -21,4 +22,29 @@ body {
     width: auto;
 }
 
+.stingray-logo {
+    height: 7em;
+    width: auto;
+    margin: 1em;
+}
 
+#button {
+    display: inline-block;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid darkgreen;
+    transition-duration: 0.5s;
+    /* border-image: linear-gradient(darkgreen,yellow) 30;
+    border-width: 4px;
+    border-style: solid; */
+    
+}
+
+#button:hover {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(87, 141, 22));
+}

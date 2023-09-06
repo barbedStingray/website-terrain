@@ -15,6 +15,9 @@
                 <div id="stingray-title">
                     <img class="stingray-img" src="Logos/StingrayDarkTM.png" alt="stingray title">
                 </div>
+                <div id="stingray-title">
+                    <img class="stingray-logo" src="Logos/bitmap.png" alt="stingray logo">
+                </div>
                 <div id="scenics-title">
                     <img class="scenics-img" src="Logos/ScenicsDarkTM.png" alt="scenics title">
                 </div>
@@ -28,14 +31,19 @@
 
 
             <!-- this line would be a button/bar used to navigate -->
-            <ul>
-                <li>Terrain Types</li>
-                <li>Modeling Career</li>
-                <li>y</li>
-                <li>z</li>
-                <li>a</li>
-                <li>b</li>
-            </ul>
+            <div id="but-list">
+                <button id="button" class="rock-wall">Rock Walls</button>
+                <button id="button" class="hedge-wall" onclick="addTerrainProduct(hedgeCollection)">Hedges</button>
+                <button id="button" class="fence-wall">Fences</button>
+                <button id="button" class="scenic-squares">Scenic Squares</button>
+                <button id="button" class="scenic-squares">Custom Pieces</button>
+
+            </div>
+
+            <div id="disp-product">
+                <!-- innerHTML product information and images -->
+
+            </div>
 
 
 
