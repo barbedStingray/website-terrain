@@ -8,7 +8,7 @@ let hedgeCollection = [
     },
     {
         item: `Dry Hedges`,
-        image: `Hedges/6"pass.jpeg`,
+        image: `Hedges/6inch.jpeg`,
         price: 30.00,
         pieces: 8,
         flock: [`spring`, `mossy`, `desert`],

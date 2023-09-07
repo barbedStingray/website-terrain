@@ -48,3 +48,8 @@ body {
 #button:hover {
     background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(87, 141, 22));
 }
+
+img {
+    height: 100px;
+    width: 100px;
+}
