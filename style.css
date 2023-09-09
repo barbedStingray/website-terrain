@@ -54,12 +54,15 @@ img {
     width: 100px;
 }
 
-#hedges {
-    /* appearance: none; */
+#terrain-display {
+    appearance: none;
     border: 2px solid green;
-    background-color: blue;
-    font-family: fantasy;
-    width: 1em;
-    height: 1em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* grid-template-rows: repeat(2, 35%);
+    grid-template-columns: repeat(2, 35%); */
     
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+    margin: 5px;
 }

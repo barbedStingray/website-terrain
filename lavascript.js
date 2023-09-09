@@ -28,6 +28,7 @@ let hedgeCollection = [
         flock: [`spring`, `mossy`, `desert`],
     }
 ]// end array
+
 let rockWallCollection = [
     {
         item: `Grey Rocks`,
@@ -59,36 +60,57 @@ let rockWallCollection = [
     }
 ]// end array
 
+let fenceCollection = [
+    {
+        item: `Cool Fences`,
+        image: `Fences/Battlefield1.jpeg`,
+        price: 30.00,
+        pieces: 8,
+        flock: [`spring`, `mossy`, `desert`],
+    },
+    {
+        item: `All Fences`,
+        image: `Fences/AllPieces.jpeg`,
+        price: 30.00,
+        pieces: 8,
+        flock: [`spring`, `mossy`, `desert`],
+    },
+    {
+        item: `Short fences`,
+        image: `Fences/2inch.jpeg`,
+        price: 30.00,
+        pieces: 8,
+        flock: [`spring`, `mossy`, `desert`],
+    },
+    {
+        item: `Long fences`,
+        image: `Fences/6inchPass.jpeg`,
+        price: 30.00,
+        pieces: 8,
+        flock: [`spring`, `mossy`, `desert`],
+    }
+]// end array
+
 const productDisplay = document.querySelector(`#disp-product`);
 
-
-
-
-
-
-function addHedgeProduct(arr){
-    console.log(`running display of products`);
+// display hedges on page
+function addDisplayProduct(arr){
 
     clearAllProducts();
+    console.log(`running display of hedges`);
+
     
     for(let products of arr){
-        productDisplay.innerHTML += `<img class="hedge" src="${products.image}"/>`;
+        productDisplay.innerHTML += 
+        `<div id="terrain-display">
+        <h4 class="product-name">${products.item}</h4>
+        <img id="${products.item}" src="${products.image}"/>`;
         console.log(products);
     }
 }// end addHedgeProduct
 
 
-function addRockWallProduct(arr){
-    console.log(`running display of products`);
-
-    clearAllProducts();
-    
-    for(let products of arr){
-        productDisplay.innerHTML += `<img class="rock-wall" src="${products.image}"/>`;
-        console.log(products);
-    }
-}// end addHedgeProduct
-
+// clearing the page of products
 function clearAllProducts(){
     console.log(`your inventory is clear!`);
     productDisplay.innerHTML = ``;
