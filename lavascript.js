@@ -28,15 +28,69 @@ let hedgeCollection = [
         flock: [`spring`, `mossy`, `desert`],
     }
 ]// end array
+let rockWallCollection = [
+    {
+        item: `Grey Rocks`,
+        image: `Rock Walls/Grey/Battlefield2.jpeg`,
+        price: 30.00,
+        pieces: 8,
+        flock: [`spring`, `mossy`, `desert`],
+    },
+    {
+        item: `Red Rocks`,
+        image: `Rock Walls/Red/Battlefield1.jpeg`,
+        price: 30.00,
+        pieces: 8,
+        flock: [`spring`, `mossy`, `desert`],
+    },
+    {
+        item: `Short Rocks`,
+        image: `Rock Walls/Grey/3inch.jpeg`,
+        price: 30.00,
+        pieces: 8,
+        flock: [`spring`, `mossy`, `desert`],
+    },
+    {
+        item: `Long Rocks`,
+        image: `Rock Walls/Red/6inch2.jpeg`,
+        price: 30.00,
+        pieces: 8,
+        flock: [`spring`, `mossy`, `desert`],
+    }
+]// end array
 
-const addHedge = document.querySelector(`#disp-product`);
+const productDisplay = document.querySelector(`#disp-product`);
 
-function addTerrainProduct(arr){
-    for(let i=0; i<arr.length; i++){
-        addHedge.innerHTML += `<img class="hedge" src="${arr[i].image}"/>`;
-        console.log(`${arr[i].item}`);
+
+
+
+
+
+function addHedgeProduct(arr){
+    console.log(`running display of products`);
+
+    clearAllProducts();
+    
+    for(let products of arr){
+        productDisplay.innerHTML += `<img class="hedge" src="${products.image}"/>`;
+        console.log(products);
     }
 }// end addHedgeProduct
 
-// addTerrainProduct(hedgeCollection);
-// addTerrainProduct(hedgeCollection);
+
+function addRockWallProduct(arr){
+    console.log(`running display of products`);
+
+    clearAllProducts();
+    
+    for(let products of arr){
+        productDisplay.innerHTML += `<img class="rock-wall" src="${products.image}"/>`;
+        console.log(products);
+    }
+}// end addHedgeProduct
+
+function clearAllProducts(){
+    console.log(`your inventory is clear!`);
+    productDisplay.innerHTML = ``;
+}
+

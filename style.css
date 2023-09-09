@@ -46,10 +46,20 @@ body {
 }
 
 #button:hover {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(87, 141, 22));
+    background-image: radial-gradient(rgb(0, 0, 0) 40%, rgb(87, 141, 22));
 }
 
 img {
     height: 100px;
     width: 100px;
+}
+
+#hedges {
+    /* appearance: none; */
+    border: 2px solid green;
+    background-color: blue;
+    font-family: fantasy;
+    width: 1em;
+    height: 1em;
+    
 }
